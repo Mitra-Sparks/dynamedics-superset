@@ -65,7 +65,6 @@ EXTRA_FORM_DATA_OVERRIDE_REGULAR_KEYS = {
 }
 
 EXTRA_FORM_DATA_OVERRIDE_EXTRA_KEYS = {
-    "druid_time_origin",
     "relative_start",
     "relative_end",
     "time_grain_sqla",

@@ -89,12 +89,6 @@ export const table = {
           referred_schema: 'carapal',
           options: {},
         },
-        {
-          unique: false,
-          column_names: ['druid_datasource_id'],
-          type: 'index' as ColumnKeyTypeType,
-          name: 'druid_datasource_id',
-        },
       ],
     },
     {
@@ -266,7 +260,7 @@ export const queries = [
     userId: 1,
     executedSql:
       'SELECT * \nFROM (SELECT created_on, changed_on, id, slice_name, ' +
-      'druid_datasource_id, table_id, datasource_type, datasource_name, ' +
+      'table_id, datasource_type, datasource_name, ' +
       'viz_type, params, created_by_fk, changed_by_fk, description, ' +
       'cache_timeout, perm\nFROM superset.slices) AS inner_qry \n LIMIT 1000',
     changed_on: '2016-10-19T20:56:12',

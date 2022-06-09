@@ -248,7 +248,6 @@ class TestUtils(SupersetTestCase):
             "granularity_sqla": "birth_year",
             "time_grain_sqla": "years",
             "granularity": "90 seconds",
-            "druid_time_origin": "now",
             "applied_time_extras": {
                 "__time_range": "1 year ago :",
                 "__time_col": "birth_year",

@@ -26,6 +26,7 @@ import {
   publicControls,
 } from './standardizedFormData';
 import { xAxisControl } from '../../../plugins/plugin-chart-echarts/src/controls';
+import { TimeGranularity } from '../../../packages/superset-ui-core/src/time-format/types';
 
 describe('should collect control values and create SFD', () => {
   const sharedControlsFormData = {};
@@ -157,7 +158,7 @@ describe('should transform form_data between table and bigNumberTotal', () => {
   const tableVizFormData = {
     datasource: '30__table',
     viz_type: 'table',
-    time_grain_sqla: 'P1D',
+    time_grain_sqla: TimeGranularity.DAY,
     time_range: 'No filter',
     query_mode: 'aggregate',
     groupby: ['name'],
