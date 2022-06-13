@@ -64,7 +64,7 @@ export default function Loading({
     <LoaderImg
       className={cls('loading', position, className)}
       alt="Loading..."
-      src={'/static/assets/images/EX_EMB_OL_WHITE.png'}
+      src="/static/assets/images/EX_EMB_OL_WHITE.png"
       role="status"
       aria-live="polite"
       aria-label="Loading"
