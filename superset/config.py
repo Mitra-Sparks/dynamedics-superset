@@ -236,7 +236,7 @@ PROXY_FIX_CONFIG = {"x_for": 1, "x_proto": 1,
 APP_NAME = "Superset"
 
 # Specify the App icon
-APP_ICON = "/static/assets/images/EX_LOGO_HZ_DISC_PETROL_RGB.png"
+APP_ICON = "https://portal.experienz.co.uk/static/brand/logo.svg"
 APP_ICON_WIDTH = 150
 
 # Specify where clicking the logo would take the user
