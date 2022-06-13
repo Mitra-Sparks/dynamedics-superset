@@ -237,7 +237,7 @@ APP_NAME = "Superset"
 
 # Specify the App icon
 APP_ICON = "/static/assets/images/EX_LOGO_HZ_DISC_PETROL_RGB.png"
-APP_ICON_WIDTH = 126
+APP_ICON_WIDTH = 150
 
 # Specify where clicking the logo would take the user
 # e.g. setting it to '/' would take the user to '/superset/welcome/'
