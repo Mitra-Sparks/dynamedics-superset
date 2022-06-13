@@ -57,14 +57,14 @@ const LoaderImg = styled.img`
 `;
 export default function Loading({
   position = 'floating',
-  image = '/static/assets/images/EX_EMB_OL_WHITE.png',
+  image = '',
   className,
 }: Props) {
   return (
     <LoaderImg
       className={cls('loading', position, className)}
       alt="Loading..."
-      src={image}
+      src={'/static/assets/images/EX_EMB_OL_WHITE.png'}
       role="status"
       aria-live="polite"
       aria-label="Loading"
