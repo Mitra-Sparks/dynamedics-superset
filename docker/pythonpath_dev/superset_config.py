@@ -99,6 +99,16 @@ WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
 
+# smtp server configuration
+EMAIL_NOTIFICATIONS = True
+SMTP_HOST = "smtp.sendgrid.net"
+SMTP_STARTTLS = False
+SMTP_SSL = False
+SMTP_USER = "apikey"
+SMTP_PORT = 587
+SMTP_PASSWORD = get_env_variable("SENDGRID_API_KEY")
+SMTP_MAIL_FROM = "reports@experienz.co.uk"
+
 #
 # Optionally import superset_config_docker.py (which will have been included on
 # the PYTHONPATH) in order to allow for local settings to be overridden
