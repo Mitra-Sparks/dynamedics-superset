@@ -37,6 +37,10 @@ down() {
 up() {
   echo "Running the Superset components..."
   docker-compose -f $EXEC_BASE/docker-compose-non-dev.yml --env-file $EXEC_BASE/.env up -d
+
+  echo "Truncating container logs..."
+  docker ps --format='{{.Names}}' | xargs -I{} docker inspect --format='{{.LogPath}}' {} | xargs truncate -s 0
+  
 }
 
 UP="" 
