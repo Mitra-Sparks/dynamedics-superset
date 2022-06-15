@@ -109,6 +109,18 @@ SMTP_PORT = 587
 SMTP_PASSWORD = get_env_variable("SENDGRID_API_KEY")
 SMTP_MAIL_FROM = "reports@experienz.co.uk"
 
+WEBDRIVER_TYPE = "firefox"
+WEBDRIVER_OPTION_ARGS = [
+    "--force-device-scale-factor=2.0",
+    "--high-dpi-support=2.0",
+    "--headless",
+    "--disable-gpu",
+    "--disable-dev-shm-usage",
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-extensions",
+]
+
 #
 # Optionally import superset_config_docker.py (which will have been included on
 # the PYTHONPATH) in order to allow for local settings to be overridden
