@@ -356,8 +356,8 @@ class BaseReportState:
             )
         else:
             name = (
-                f"{self._report_schedule.name}: "
-                f"{self._report_schedule.dashboard.dashboard_title}"
+                f"{self._report_schedule.name}"
+                # f"{self._report_schedule.dashboard.dashboard_title}"
             )
         return NotificationContent(
             name=name,
