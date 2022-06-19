@@ -20,6 +20,7 @@
 # development environments. Also note that superset_config_docker.py is imported
 # as a final step as a means to override "defaults" configured here
 #
+import math
 import logging
 import os
 from datetime import timedelta
@@ -66,9 +67,34 @@ REDIS_HOST = get_env_variable("REDIS_HOST")
 REDIS_PORT = get_env_variable("REDIS_PORT")
 REDIS_CELERY_DB = get_env_variable("REDIS_CELERY_DB", "0")
 REDIS_RESULTS_DB = get_env_variable("REDIS_RESULTS_DB", "1")
+REDIS_RESULTS_CACHE_DB = get_env_variable("REDIS_RESULTS_DB", "2")
 
 RESULTS_BACKEND = FileSystemCache("/app/superset_home/sqllab")
 
+CACHE_CONFIG = {
+    "CACHE_TYPE": "RedisCache",
+    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=1).total_seconds()),
+    "CACHE_KEY_PREFIX": "superset_cache",
+    "CACHE_REDIS_URL": f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_RESULTS_CACHE_DB}",
+}
+
+DATA_CACHE_CONFIG = {
+    **CACHE_CONFIG,
+    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=30).total_seconds()),
+    "CACHE_KEY_PREFIX": "superset_data_cache",
+}
+
+FILTER_STATE_CACHE_CONFIG = {
+    "CACHE_TYPE": "SimpleCache",
+    "CACHE_THRESHOLD": math.inf,
+    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=10).total_seconds()),
+}
+
+EXPLORE_FORM_DATA_CACHE_CONFIG = {
+    "CACHE_TYPE": "SimpleCache",
+    "CACHE_THRESHOLD": math.inf,
+    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=10).total_seconds()),
+}
 
 class CeleryConfig(object):
     BROKER_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_CELERY_DB}"
