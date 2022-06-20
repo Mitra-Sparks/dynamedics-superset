@@ -38,7 +38,7 @@ from email.mime.application import MIMEApplication
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.utils import formatdate
+from email.utils import formatdate, formataddr
 from enum import Enum, IntEnum
 from io import BytesIO
 from timeit import default_timer
@@ -898,11 +898,12 @@ def send_email_smtp(  # pylint: disable=invalid-name,too-many-arguments,too-many
         'test@example.com', 'foo', '<b>Foo</b> bar',['/dev/null'], dryrun=True)
     """
     smtp_mail_from = config["SMTP_MAIL_FROM"]
+    smtp_mail_from_name = config["SMTP_MAIL_FROM_NAME"]
     smtp_mail_to = get_email_address_list(to)
 
     msg = MIMEMultipart(mime_subtype)
     msg["Subject"] = subject
-    msg["From"] = smtp_mail_from
+    msg["From"] = formataddr((smtp_mail_from_name, smtp_mail_from)) 
     msg["To"] = ", ".join(smtp_mail_to)
     msg.preamble = "This is a multi-part message in MIME format."
 
