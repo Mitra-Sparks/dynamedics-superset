@@ -134,7 +134,7 @@ SMTP_USER = "apikey"
 SMTP_PORT = 587
 SMTP_PASSWORD = get_env_variable("SENDGRID_API_KEY")
 SMTP_MAIL_FROM = "reports@experienz.co.uk"
-SMTP_MAIL_FROM_name = "experienz"
+SMTP_MAIL_FROM_NAME = "experienz"
 
 WEBDRIVER_TYPE = "firefox"
 WEBDRIVER_OPTION_ARGS = [
