@@ -148,7 +148,7 @@ WEBDRIVER_OPTION_ARGS = [
     "--disable-extensions",
 ]
 
-EMAIL_REPORTS_SUBJECT_PREFIX = "Last Week's Summary For"
+EMAIL_REPORTS_SUBJECT_PREFIX = "Summary For"
 
 #
 # Optionally import superset_config_docker.py (which will have been included on

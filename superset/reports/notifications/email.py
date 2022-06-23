@@ -83,23 +83,6 @@ class EmailNotification(BaseNotification):  # pylint: disable=too-few-public-met
         # Strip any malicious HTML from the description
         description = bleach.clean(self._content.description or "")
 
-        # Strip malicious HTML from embedded data, allowing only table elements
-        if self._content.embedded_data is not None:
-            df = self._content.embedded_data
-            html_table = bleach.clean(
-                df.to_html(na_rep="", index=True),
-                tags=TABLE_TAGS,
-                attributes=TABLE_ATTRIBUTES,
-            )
-        else:
-            html_table = ""
-
-        call_to_action = __("Explore in Superset")
-        url = (
-            modify_url_query(self._content.url, standalone="0")
-            if self._content.url is not None
-            else ""
-        )
         img_tags = []
         for msgid in images.keys():
             #  <img width="1000px" src="cid:{msgid}">
@@ -294,7 +277,7 @@ class EmailNotification(BaseNotification):  # pylint: disable=too-few-public-met
                                 <td align="center" valign="top" style="padding:0;Margin:0;width:560px"> 
                                 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                                     <tr> 
-                                    <td align="left" class="es-m-txt-l" style="padding:0;Margin:0;padding-bottom:10px"><h1 style="Margin:0;line-height:46px;mso-line-height-rule:exactly;font-family:'Poppins', 'helvetica neue', helvetica, arial, sans-serif;font-size:36px;font-style:normal;font-weight:bold;color:#333333"><b>Summary From Last Week</b></h1></td> 
+                                    <td align="left" class="es-m-txt-l" style="padding:0;Margin:0;padding-bottom:10px"><h1 style="Margin:0;line-height:46px;mso-line-height-rule:exactly;font-family:'Poppins', 'helvetica neue', helvetica, arial, sans-serif;font-size:36px;font-style:normal;font-weight:bold;color:#333333"><b>{description}</b></h1></td> 
                                     </tr> 
                                     <tr> 
                                     <td align="left" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'Poppins', 'helvetica neue', helvetica, arial, sans-serif;line-height:18px;Margin-bottom:15px;color:#333333;font-size:12px"><br></p></td> 
