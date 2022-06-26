@@ -103,6 +103,17 @@ class CeleryConfig(object):
     CELERYD_LOG_LEVEL = "DEBUG"
     CELERYD_PREFETCH_MULTIPLIER = 1
     CELERY_ACKS_LATE = False
+    CELERY_ANNOTATIONS = {
+        'sql_lab.get_sql_results': {
+            'rate_limit': '100/s',
+        },
+        'email_reports.send': {
+            'rate_limit': '1/s',
+            'time_limit': 600,
+            'soft_time_limit': 600,
+            'ignore_result': True,
+        },
+    }
     CELERYBEAT_SCHEDULE = {
         "reports.scheduler": {
             "task": "reports.scheduler",
@@ -116,6 +127,9 @@ class CeleryConfig(object):
 
 
 CELERY_CONFIG = CeleryConfig
+
+SCREENSHOT_LOCATE_WAIT = 120
+SCREENSHOT_LOAD_WAIT = 600
 
 FEATURE_FLAGS = {"ALERT_REPORTS": True}
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = False
