@@ -260,9 +260,9 @@ class EmailNotification(BaseNotification):  # pylint: disable=too-few-public-met
                                 <td align="left" style="padding:0;Margin:0;width:560px"> 
                                 <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                                     <tr> 
-                                    <td class="es-m-txt-c" align="left" style="padding:0;Margin:0;padding-top:10px;padding-left:15px;font-size:0px">
+                                    <td class="es-m-txt-c" align="left" style="padding:0;Margin:0;padding-top:10px;font-size:0px">
                                         <a href="https://experienz.co.uk" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#5C68E2;font-size:12px">
-                                            <img src="http://cdn.mcauto-images-production.sendgrid.net/a6521006123899d4/81d87505-15ed-4f98-8276-2638e243ef5a/465x465.png" alt="experienz" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" title="experienz" height="100">
+                                            <img src="http://cdn.mcauto-images-production.sendgrid.net/a6521006123899d4/81d87505-15ed-4f98-8276-2638e243ef5a/465x465.png" alt="experienz" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;margin:0 auto" title="experienz" height="100">
                                         </a>
                                     </td> 
                                     </tr> 
@@ -288,7 +288,7 @@ class EmailNotification(BaseNotification):  # pylint: disable=too-few-public-met
                                     </td> 
                                     </tr> 
                                     <tr> 
-                                    <td align="center" class="es-m-txt-c" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><span class="es-button-border" style="border-style:solid;border-color:transparent;background:transparent;border-width:2px;display:inline-block;border-radius:0px;width:auto"><a href="https://portal.experienz.co.uk/insights/organisational-health" class="es-button es-button-1" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#088A84;border-width:15px 30px;display:inline-block;background:#088A84;border-radius:0px;font-family:'Poppins', 'helvetica neue', helvetica, arial, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Explore More</a></span></td> 
+                                    <td align="center" class="es-m-txt-c" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><span class="es-button-border" style="border-style:solid;border-color:transparent;background:transparent;border-width:2px;display:inline-block;border-radius:0px;width:auto"><a href="https://portal.experienz.co.uk/insights/organisational-health" class="es-button es-button-1" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:16px !important;border-style:solid;border-color:#088A84;border-width:15px 30px;display:inline-block;background:#088A84;border-radius:0px;font-family:'Poppins', 'helvetica neue', helvetica, arial, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Explore More</a></span></td> 
                                     </tr> 
                                 </table></td> 
                                 </tr> 
