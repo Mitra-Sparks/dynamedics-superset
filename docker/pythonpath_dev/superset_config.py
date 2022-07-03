@@ -80,20 +80,20 @@ CACHE_CONFIG = {
 
 DATA_CACHE_CONFIG = {
     **CACHE_CONFIG,
-    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=30).total_seconds()),
+    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=12).total_seconds()),
     "CACHE_KEY_PREFIX": "superset_data_cache",
 }
 
 FILTER_STATE_CACHE_CONFIG = {
     "CACHE_TYPE": "SimpleCache",
     "CACHE_THRESHOLD": math.inf,
-    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=10).total_seconds()),
+    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=12).total_seconds()),
 }
 
 EXPLORE_FORM_DATA_CACHE_CONFIG = {
     "CACHE_TYPE": "SimpleCache",
     "CACHE_THRESHOLD": math.inf,
-    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=10).total_seconds()),
+    "CACHE_DEFAULT_TIMEOUT": int(timedelta(hours=12).total_seconds()),
 }
 
 class CeleryConfig(object):
@@ -128,7 +128,7 @@ class CeleryConfig(object):
 
 CELERY_CONFIG = CeleryConfig
 
-SCREENSHOT_LOCATE_WAIT = 120
+SCREENSHOT_LOCATE_WAIT = 300
 SCREENSHOT_LOAD_WAIT = 600
 
 FEATURE_FLAGS = {"ALERT_REPORTS": True}
@@ -151,16 +151,16 @@ SMTP_MAIL_FROM = "noreply@experienz.co.uk"
 SMTP_MAIL_FROM_NAME = "experienz"
 
 WEBDRIVER_TYPE = "firefox"
-WEBDRIVER_OPTION_ARGS = [
-    "--force-device-scale-factor=2.0",
-    "--high-dpi-support=2.0",
-    "--headless",
-    "--disable-gpu",
-    "--disable-dev-shm-usage",
-    "--no-sandbox",
-    "--disable-setuid-sandbox",
-    "--disable-extensions",
-]
+# WEBDRIVER_OPTION_ARGS = [
+#     "--force-device-scale-factor=2.0",
+#     "--high-dpi-support=2.0",
+#     "--headless",
+#     "--disable-gpu",
+#     "--disable-dev-shm-usage",
+#     "--no-sandbox",
+#     "--disable-setuid-sandbox",
+#     "--disable-extensions",
+# ]
 
 EMAIL_REPORTS_SUBJECT_PREFIX = "Summary For"
 

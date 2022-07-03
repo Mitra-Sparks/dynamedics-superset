@@ -125,8 +125,8 @@ CMD /usr/bin/run-server.sh
 # Experienz image...
 ######################################################################
 FROM lean AS experienz
-ARG GECKODRIVER_VERSION=v0.28.0
-ARG FIREFOX_VERSION=88.0
+ARG GECKODRIVER_VERSION=v0.31.0
+ARG FIREFOX_VERSION=102.0
 
 USER root
 
