@@ -151,16 +151,16 @@ SMTP_MAIL_FROM = "noreply@experienz.co.uk"
 SMTP_MAIL_FROM_NAME = "experienz"
 
 WEBDRIVER_TYPE = "firefox"
-# WEBDRIVER_OPTION_ARGS = [
-#     "--force-device-scale-factor=2.0",
-#     "--high-dpi-support=2.0",
-#     "--headless",
-#     "--disable-gpu",
-#     "--disable-dev-shm-usage",
-#     "--no-sandbox",
-#     "--disable-setuid-sandbox",
-#     "--disable-extensions",
-# ]
+WEBDRIVER_OPTION_ARGS = [
+    "--force-device-scale-factor=2.0",
+    "--high-dpi-support=2.0",
+    "--headless",
+    "--disable-gpu",
+    "--disable-dev-shm-usage",
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-extensions",
+]
 
 EMAIL_REPORTS_SUBJECT_PREFIX = "Summary For"
 
