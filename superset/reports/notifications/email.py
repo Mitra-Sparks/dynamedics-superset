@@ -93,6 +93,19 @@ class EmailNotification(BaseNotification):  # pylint: disable=too-few-public-met
                 """
             )
         img_tag = "".join(img_tags)
+
+        email_description = ""
+
+        if description:
+            email_description = f""" <tr> 
+                                        <td align="left" class="es-m-txt-l" style="padding:0;Margin:0;padding-bottom:10px">
+                                            <h1 style="Margin:0;line-height:46px;mso-line-height-rule:exactly;font-family:'Poppins', 'helvetica neue', helvetica, arial, sans-serif;font-size:36px;font-style:normal;font-weight:bold;color:#333333">
+                                                <b>{description}</b>
+                                            </h1>
+                                        </td> 
+                                    </tr>
+            """
+
         #            <html>
         #      <head>
         #        <style type="text/css">
@@ -276,12 +289,7 @@ class EmailNotification(BaseNotification):  # pylint: disable=too-few-public-met
                                 <tr> 
                                 <td align="center" valign="top" style="padding:0;Margin:0;width:560px"> 
                                 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                                    <tr> 
-                                    <td align="left" class="es-m-txt-l" style="padding:0;Margin:0;padding-bottom:10px"><h1 style="Margin:0;line-height:46px;mso-line-height-rule:exactly;font-family:'Poppins', 'helvetica neue', helvetica, arial, sans-serif;font-size:36px;font-style:normal;font-weight:bold;color:#333333"><b>{description}</b></h1></td> 
-                                    </tr> 
-                                    <tr> 
-                                    <td align="left" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'Poppins', 'helvetica neue', helvetica, arial, sans-serif;line-height:18px;Margin-bottom:15px;color:#333333;font-size:12px"><br></p></td> 
-                                    </tr> 
+                                    {email_description}
                                     <tr> 
                                     <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px;font-size:0px">
                                         {img_tag}
