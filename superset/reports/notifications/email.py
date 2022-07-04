@@ -267,7 +267,7 @@ class EmailNotification(BaseNotification):  # pylint: disable=too-few-public-met
                         <td align="center" style="padding:0;Margin:0"> 
                         <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px"> 
                             <tr> 
-                            <td align="left" style="padding:0;Margin:0;padding-right:40px"> 
+                            <td align="left" style="padding:0;Margin:0;"> 
                             <table cellspacing="0" cellpadding="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                                 <tr> 
                                 <td align="left" style="padding:0;Margin:0;width:560px"> 
