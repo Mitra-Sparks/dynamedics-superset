@@ -88,7 +88,7 @@ class EmailNotification(BaseNotification):  # pylint: disable=too-few-public-met
             #  <img width="1000px" src="cid:{msgid}">
             img_tags.append(
                 f"""<div class="image">
-                     <img class="adapt-img" src="cid:{msgid}" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="1000">
+                     <img class="adapt-img" src="cid:{msgid}" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="600">
                 </div>
                 """
             )
